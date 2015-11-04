@@ -12,3 +12,13 @@ ssh操作
 	
 基本命令学习：
 	修改完.bashrc之后，要使用source .bashrc才能使.bashrc文件起效
+将  md文件转为html文件
+sudo apt-get install discount
+sudo apt-get install python-pisa
+# Debian/Ubuntu
+sudo apt-get install python-markdown
+转换工作很简单：
+# 用  discount提供的markdown工具
+markdown -o Release-Notes.html Release-Notes.md
+# 将  html转换成PDF
+xhtml2pdf --html Release-Notes.html Release-Notes.pdf

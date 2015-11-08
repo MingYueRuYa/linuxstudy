@@ -1,0 +1,38 @@
+-E 预处理过程
+	gcc -E hello.c -o hello.i
+-S 编译为汇编代码
+	gcc -S hello.i -o hello.s
+-c 对于生成的汇编文件，gas汇编器负责将其编译为目标文件
+	gcc -c hello.s -o hello.o
+链接
+	gcc hello.o -o hello
+多个文件编译
+	gcc hello.c test.c -o test
+-Wall 尽可能多的给出警告信息
+	gcc -Wall hello.c -o hello
+-I 库文件连接
+	gcc -c -I /usr/dev/mysql/include test.c -o test.o
+-L 库文件连接
+	gcc -L /usr/dev/mysql/lib -lmysqlclient test.o -o test
+-static 强制使用静态库连接
+	gcc -L /usr/dev/mysql/lib -static -lmysqlclient test.o -o test
+
+静态库链接时搜索路径顺序：
+1.ld会找gcc命令中的参数-L
+2.再找gcc的环境变量LIBRARY_PATH
+3.再找内定目录 /lib/usr/你b/ /usr/local/lib 这是当初compile gcc是写在程序中
+
+动态库链接、执行时搜索路径：
+1.编译目标代码时指定的动态库搜索路径
+2.环境变量LD_LIBRARY_PATH指定的动态库搜索路径
+3.配置文件/etc/ld.so.conf中指定的动态库搜索路径
+4.默认的动态搜索路径 /lib
+5.默认的动态库搜索路径/usr/lib
+
+有关环境变量：
+LIBRARY_PATH环境变量：指定程序静态链接库文件搜索路径
+LD_LIBRARY_PATH：指定程序动态链接库文件的搜索路径
+
+
+
+	

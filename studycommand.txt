@@ -25,3 +25,7 @@ xhtml2pdf --html Release-Notes.html Release-Notes.pdf
 
 整站下载命令
 wget -r -k -np -p http://www.cplusplus.com/reference/
+
+
+命令行安装qt工具：
+sudo apt-get install qt4-dev-tools qt4-doc qt4-qtconfig qt4-demos qt4-designer

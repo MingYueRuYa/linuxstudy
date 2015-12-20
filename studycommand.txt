@@ -40,6 +40,9 @@ sudo apt-get install mysql-server
 sudo apt-get install mysql-clent
 sudo apt-get install libmysqlclient-dev
 
+qt4安装mysql驱动
+sudo apt-get install libqt4-sql-mysql
+
 卸载mysql
 sudo apt-get autoremove --purge mysql-server-5.0
 sudo apt-get remove mysql-server

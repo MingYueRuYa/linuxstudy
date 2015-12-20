@@ -29,3 +29,25 @@ wget -r -k -np -p http://www.cplusplus.com/reference/
 
 命令行安装qt工具：
 sudo apt-get install qt4-dev-tools qt4-doc qt4-qtconfig qt4-demos qt4-designer
+
+解压.tar.bz2文件
+tar xf ***.tar.bz2
+解压.tar.gz文件
+tar zxf ***.tar.gz
+
+安装mysql
+sudo apt-get install mysql-server
+sudo apt-get install mysql-clent
+sudo apt-get install libmysqlclient-dev
+
+卸载mysql
+sudo apt-get autoremove --purge mysql-server-5.0
+sudo apt-get remove mysql-server
+sudo apt-get remove autoremove mysql-server
+sudo apt-get remove mysql-commo
+
+登录mysql
+mysql -u username -p password
+show databases;
+use mysql;
+show tables;

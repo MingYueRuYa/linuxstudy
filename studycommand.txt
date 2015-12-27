@@ -54,3 +54,15 @@ mysql -u username -p password
 show databases;
 use mysql;
 show tables;
+
+Centos open mysql 3306 port
+打开80
+# /sbin/iptables -I INPUT -p tcp --dport 80 -j ACCEPT
+打开22
+# /sbin/iptables -I INPUT -p tcp --dport 22 -j ACCEPT
+打开3306
+# /sbin/iptables -I INPUT -p tcp --dport 3306 -j ACCEPT
+然后保存：
+# /etc/rc.d/init.d/iptables save
+查看打开的端口：
+# /etc/init.d/iptables status

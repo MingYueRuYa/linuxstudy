@@ -63,9 +63,22 @@ Centos open mysql 3306 port
 打开3306
 # /sbin/iptables -I INPUT -p tcp --dport 3306 -j ACCEPT
 然后保存：
-# /etc/rc.d/init.d/iptables save
+# /etc/rc.d/init.d/iptables save or /etc/init.d/iptables save
+what's more, restart firewall.
+# /etc/init.d/iptables restart
 查看打开的端口：
 # /etc/init.d/iptables status
+  search 3306 port is or not watched.
+
+Ubuntu open firewall
+# sudo ufw enable
+# sudo ufw allow/block ssh (server)
+允许 80port
+# sudo ufw allow/block 80 (port)
+查看ufw的状态
+# sudo ufw status
+
+
 
 卸载mysql步骤
 #yum remove  mysql mysql-server mysql-libs mysql-server;

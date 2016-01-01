@@ -66,3 +66,14 @@ Centos open mysql 3306 port
 # /etc/rc.d/init.d/iptables save
 查看打开的端口：
 # /etc/init.d/iptables status
+
+卸载mysql步骤
+#yum remove  mysql mysql-server mysql-libs mysql-server;
+#find / -name mysql 将找到的相关东西delete掉；
+#rpm -qa|grep mysql(查询出来的东东yum remove掉)
+
+centos install g++
+#sudo yum -y install gcc-c++
+
+which command
+which cmake（查看cmake的路径）

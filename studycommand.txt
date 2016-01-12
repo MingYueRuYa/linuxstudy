@@ -94,3 +94,15 @@ which cmake（查看cmake的路径）
 解决gedit中文乱码
 gsettings set org.gnome.gedit.preferences.encodings auto-detected "['GB18030', 'GB2312', 'GBK', 'UTF-8', 'BIG5', 'CURRENT', 'UTF-16']"
 gsettings set org.gnome.gedit.preferences.encodings shown-in-menu "['GB18030', 'GB2312', 'GBK', 'UTF-8', 'BIG5', 'CURRENT', 'UTF-16']"
+
+Ubuntu desktop is not open
+sudo stop lightdm
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install --reinstall
+sudo start lightdm
+
+
+
+
+

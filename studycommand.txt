@@ -94,3 +94,9 @@ which cmake（查看cmake的路径）
 解决gedit中文乱码
 gsettings set org.gnome.gedit.preferences.encodings auto-detected "['GB18030', 'GB2312', 'GBK', 'UTF-8', 'BIG5', 'CURRENT', 'UTF-16']"
 gsettings set org.gnome.gedit.preferences.encodings shown-in-menu "['GB18030', 'GB2312', 'GBK', 'UTF-8', 'BIG5', 'CURRENT', 'UTF-16']"
+
+CentOS开启echo服务
+#yum install xinetd
+#cd /etc/xinetd.d/
+#vi echo.stream 将disable的no修改yes
+

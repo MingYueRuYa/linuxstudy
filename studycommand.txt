@@ -100,3 +100,10 @@ CentOS开启echo服务
 #cd /etc/xinetd.d/
 #vi echo.stream 将disable的no修改yes
 
+Ubuntu desktop is not open
+#sudo stop lightdm
+#sudo apt-get update
+#sudo apt-get upgrade
+#sudo apt-get install --reinstall
+#sudo start lightdm
+

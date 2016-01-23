@@ -107,3 +107,14 @@ Ubuntu desktop is not open
 #sudo apt-get install --reinstall
 #sudo start lightdm
 
+history
+	-d 1 表示删除序号为1的历史记录
+	-c 删除所有	
+
+在用户的家目录下可能看到mysql_history和bash_history历史
+强制linux不记录敏感历史命令
+#HISTCONTROL=ignorespace
+
+
+
+

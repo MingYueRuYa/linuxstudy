@@ -1,0 +1,17 @@
+Capture Filters
+语法：
+	<Protocal name><Direction><Hosts><Value><Logical operations><Expressions>
+示例：
+1.tcp src port 443.只抓取来源端口是443的tcp数据.
+2.not arp.捕获区arp数据
+3.port 80.获取端口是80的数据， 不指定代表全部都获取
+4.src 192.168.1.121 and port 233. 获取来源ip是192.168.1.121和端口号是233.
+
+Display Filters
+语法：
+	<protocol>.<string1>.<string2>.<comparision operator><value> <Logical operators> <expressions>
+示例：
+1. tcp.port=80.展示端口是80的tcp数据
+2. !arp.不展示ARP协议的数据
+3. ip.addr==192.168.1.111.只展示地址是有192.168.1.111数据，不管来源和目的
+4. (ip.dst == 42.156.152.144) && !(ip.des == 42.156.152.144)

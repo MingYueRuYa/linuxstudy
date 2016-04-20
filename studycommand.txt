@@ -29,3 +29,10 @@ wget -r -k -np -p http://www.cplusplus.com/reference/
 
 命令行安装qt工具：
 sudo apt-get install qt4-dev-tools qt4-doc qt4-qtconfig qt4-demos qt4-designer
+
+让Ubuntu以字符界面启动：
+sudo vim /etc/default/grub中将GRUB_CMDLINE_LINUX_DEFAULT="quite splash" 改成 GRUB_CMDLINE_LINUX_DEFAULT="quite splash text"  
+sudo update-gurb 重启之后进入字符界面
+
+
+

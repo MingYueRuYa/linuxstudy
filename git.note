@@ -1,0 +1,13 @@
+1.ignore specially files or dirs
+	(1).create file named .gitignore in you want to push to git dir.
+	(2).use vim open .gitignore file, and you can write something.
+		example:
+			*.out
+			*.so
+		#ignore *.out and *.so files			
+			test/
+		#ignore test dir and test dir files.
+	(3).if you do upside this, the git maybe not works, because you maybe already added *.out and *.so and test/ to git repository
+	so if it is, you can do this.
+		git rm -r --cache "your don't track files or dirs"	#rm files or dirs from git repository, it not delete you files from local
+	system.

@@ -34,5 +34,91 @@ sudo apt-get install qt4-dev-tools qt4-doc qt4-qtconfig qt4-demos qt4-designer
 sudo vim /etc/default/grub中将GRUB_CMDLINE_LINUX_DEFAULT="quite splash" 改成 GRUB_CMDLINE_LINUX_DEFAULT="quite splash text"  
 sudo update-gurb 重启之后进入字符界面
 
+解压.tar.bz2文件
+tar xf ***.tar.bz2
+解压.tar.gz文件
+tar zxf ***.tar.gz
+
+安装mysql
+sudo apt-get install mysql-server
+sudo apt-get install mysql-clent
+sudo apt-get install libmysqlclient-dev
+
+qt4安装mysql驱动
+sudo apt-get install libqt4-sql-mysql
+
+卸载mysql
+sudo apt-get autoremove --purge mysql-server-5.0
+sudo apt-get remove mysql-server
+sudo apt-get remove autoremove mysql-server
+sudo apt-get remove mysql-commo
+
+登录mysql
+mysql -u username -p password
+show databases;
+use mysql;
+show tables;
+
+Centos open mysql 3306 port
+打开80
+# /sbin/iptables -I INPUT -p tcp --dport 80 -j ACCEPT
+打开22
+# /sbin/iptables -I INPUT -p tcp --dport 22 -j ACCEPT
+打开3306
+# /sbin/iptables -I INPUT -p tcp --dport 3306 -j ACCEPT
+然后保存：
+# /etc/rc.d/init.d/iptables save or /etc/init.d/iptables save
+what's more, restart firewall.
+# /etc/init.d/iptables restart
+查看打开的端口：
+# /etc/init.d/iptables status
+  search 3306 port is or not watched.
+
+Ubuntu open firewall
+# sudo ufw enable
+# sudo ufw allow/block ssh (server)
+允许 80port
+# sudo ufw allow/block 80 (port)
+查看ufw的状态
+# sudo ufw status
+
+
+
+卸载mysql步骤
+#yum remove  mysql mysql-server mysql-libs mysql-server;
+#find / -name mysql 将找到的相关东西delete掉；
+#rpm -qa|grep mysql(查询出来的东东yum remove掉)
+
+centos install g++
+#sudo yum -y install gcc-c++
+
+which command
+which cmake（查看cmake的路径）
+
+解决gedit中文乱码
+gsettings set org.gnome.gedit.preferences.encodings auto-detected "['GB18030', 'GB2312', 'GBK', 'UTF-8', 'BIG5', 'CURRENT', 'UTF-16']"
+gsettings set org.gnome.gedit.preferences.encodings shown-in-menu "['GB18030', 'GB2312', 'GBK', 'UTF-8', 'BIG5', 'CURRENT', 'UTF-16']"
+
+CentOS开启echo服务
+#yum install xinetd
+#cd /etc/xinetd.d/
+#vi echo.stream 将disable的no修改yes
+
+Ubuntu desktop is not open
+#sudo stop lightdm
+#sudo apt-get update
+#sudo apt-get upgrade
+#sudo apt-get install --reinstall
+#sudo start lightdm
+
+history
+	-d 1 表示删除序号为1的历史记录
+	-c 删除所有	
+
+在用户的家目录下可能看到mysql_history和bash_history历史
+强制linux不记录敏感历史命令
+#HISTCONTROL=ignorespace
+
+
 
 

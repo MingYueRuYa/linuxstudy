@@ -119,6 +119,7 @@ history
 强制linux不记录敏感历史命令
 #HISTCONTROL=ignorespace
 
-
+ls 只查看目录
+	ls -d */
 
 

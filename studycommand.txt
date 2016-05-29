@@ -123,4 +123,7 @@ history
 	1.先要试试其他几章有没有，如果还是没有的话，可能需要安装相关的manpages
 	2.就说pthread_mutex_init需要安装 sudo apt-get install manpages-posix-dev包就可以
 
+ls 只查看目录
+	ls -d */
+
 

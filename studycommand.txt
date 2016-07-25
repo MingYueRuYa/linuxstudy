@@ -126,4 +126,10 @@ history
 ls 只查看目录
 	ls -d */
 
+编译glog方法
+	cd glog
+	mkdir build && cd build
+	export CXXFLAGS="-fPIC" && sudo cmake .. && sudo  make VERBOSE=1
+	make
+	sudo make install
 

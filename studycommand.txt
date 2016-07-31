@@ -39,6 +39,12 @@ tar xf ***.tar.bz2
 解压.tar.gz文件
 tar zxf ***.tar.gz
 
+tar czvf *.tar.gz files
+tar cvf *.tar.gz -C dirname
+tar -tvf *.tar.gz 查看gz包中的文件
+打包文件时，去除某个文件
+tar -czvf *.tar.gz ./* --exclude filename
+
 安装mysql
 sudo apt-get install mysql-server
 sudo apt-get install mysql-clent
@@ -127,9 +133,12 @@ ls 只查看目录
 	ls -d */
 
 编译glog方法
+	cmake version 3.0 above
 	cd glog
 	mkdir build && cd build
 	export CXXFLAGS="-fPIC" && sudo cmake .. && sudo  make VERBOSE=1
 	make
 	sudo make install
+
+
 
